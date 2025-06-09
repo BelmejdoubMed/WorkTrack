@@ -17,7 +17,7 @@ public class AdminService {
         return adminRepository.findAll();
     }
 
-    public Admin findById(int id) {
+    public Admin findById(Long id) {
         return adminRepository.findById(id).orElse(null);
     }
 
@@ -25,12 +25,12 @@ public class AdminService {
         return adminRepository.save(admin);
     }
 
-    public Admin update(int id, Admin admin) {
+    public Admin update(Long id, Admin admin) {
         admin.setId(id);
         return adminRepository.save(admin);
     }
 
-    public void delete(int id) {
+    public void delete(Long id) {
         adminRepository.deleteById(id);
     }
 }
